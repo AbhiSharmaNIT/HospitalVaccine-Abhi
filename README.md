@@ -1,3 +1,5 @@
+<img width="1600" height="762" alt="image" src="https://github.com/user-attachments/assets/92b7f2d1-0b9d-45a0-a384-271ea38c6677" />
+
 # 🏥 Hospital Vaccine Search & Slot Booking System
 
 A full-stack web application designed to help citizens easily find nearby hospitals offering vaccines, check real-time availability, compare prices, and book vaccination slots without overbooking.
