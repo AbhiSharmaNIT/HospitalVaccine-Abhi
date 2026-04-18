@@ -1,70 +1,250 @@
-# Getting Started with Create React App
+# 🏥 Hospital Vaccine Search & Slot Booking System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application designed to help citizens easily find nearby hospitals offering vaccines, check real-time availability, compare prices, and book vaccination slots without overbooking.
 
-## Available Scripts
+Built as part of a **Fullstack Hackathon Use Case**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Problem Statement
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Citizens often struggle to:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Find nearby hospitals offering specific vaccines
+* Check daily slot availability
+* Compare vaccine prices
+* Book slots without delays or overbooking
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎯 Objective
 
-### `npm run build`
+To build a platform that:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Enables users to search hospitals and vaccines
+* Shows real-time slot availability
+* Displays transparent pricing
+* Allows seamless booking and management of vaccine slots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 👥 User Roles & Capabilities
 
-### `npm run eject`
+### 👤 Citizen / Patient
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* 🔍 Search hospitals by **city / pincode / name**
+* 🎯 Filter by **vaccine type and price**
+* 📅 View availability (today, tomorrow, upcoming days)
+* 💰 Compare vaccine costs across hospitals
+* ✅ Book vaccine slots
+* 🔄 Modify or ❌ cancel bookings
+* 📄 Receive booking confirmation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🏥 Hospital / Admin
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* ➕ Add & update hospital details
+* 💉 Manage vaccines and pricing
+* 📊 Set **daily slot capacity**
+* 📅 Track bookings for specific dates
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⚙️ Core Functionalities
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* 📆 **Daily Slot Management**
+  Availability is tracked per date
 
-### Code Splitting
+* 🚫 **No Overbooking**
+  Booking fails if slots are full
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* 💰 **Price Transparency**
+  Cost is visible and fixed at booking time
 
-### Analyzing the Bundle Size
+* 💾 **Persistent Storage**
+  Data stored for:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  * Users
+  * Hospitals
+  * Vaccines
+  * Bookings
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🛠️ Tech Stack
 
-### Advanced Configuration
+### Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* React (Vite)
+* HTML, CSS, JavaScript
 
-### Deployment
+### Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Node.js
+* Express.js
 
-### `npm run build` fails to minify
+### Database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* MongoDB (Mongoose)
+
+---
+
+## 🏗️ System Design Highlights
+
+* 🔗 RESTful API architecture
+* 🧠 Efficient data modeling for:
+
+  * Hospitals
+  * Vaccines
+  * Slots
+  * Bookings
+* 🔐 Role-based access (User vs Admin)
+* ✅ Backend validations:
+
+  * Slot availability
+  * Duplicate booking prevention
+  * Date validation
+
+---
+
+## 📂 Project Structure
+
+```id="rxvij3"
+HospitalVaccine/
+│
+├── client/        # Frontend (React)
+├── server/        # Backend (Node + Express)
+├── README.md
+```
+
+---
+
+## 🔗 API Overview
+
+| Method | Endpoint     | Description               |
+| ------ | ------------ | ------------------------- |
+| GET    | /hospitals   | Get all hospitals         |
+| GET    | /search      | Search & filter hospitals |
+| POST   | /auth/signup | Register user             |
+| POST   | /auth/login  | Login user                |
+| POST   | /booking     | Book vaccine slot         |
+| PUT    | /booking/:id | Modify booking            |
+| DELETE | /booking/:id | Cancel booking            |
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repository
+
+```id="2plk0u"
+git clone https://github.com/your-username/HospitalVaccine.git
+cd HospitalVaccine
+```
+
+---
+
+### 2️⃣ Backend Setup
+
+```id="rt9rtn"
+cd server
+npm install
+npm start
+```
+
+Runs on:
+
+```id="vr4hpk"
+http://localhost:5000
+```
+
+---
+
+### 3️⃣ Frontend Setup
+
+```id="6y0xhc"
+cd client
+npm install
+npm run dev
+```
+
+Runs on:
+
+```id="9kxt14"
+http://localhost:5173
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create `.env` in server:
+
+```id="6j7hsv"
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## 🚀 Key Features (Hackathon Focus)
+
+* 🔎 Advanced search & filtering UI
+* ⚡ Real-time availability tracking
+* 🧾 Clean backend booking logic
+* 🔐 Authentication & authorization
+* 📉 Prevents overbooking
+* 🧩 Scalable architecture
+
+---
+
+## 💡 Design Decisions
+
+* Slot system implemented as **date-based capacity**
+* REST APIs for scalability
+* MongoDB used for flexible schema design
+* Separate modules for **auth, hospitals, bookings**
+
+---
+
+## 📸 Screenshots
+
+*Add UI screenshots here*
+
+---
+
+## 🔮 Future Improvements
+
+* 💳 Payment integration
+* 📩 Email/SMS notifications
+* 📊 Admin dashboard analytics
+* 🌍 Geo-location based search
+* 🔄 Real-time updates using WebSockets
+
+---
+
+## 🤝 Contribution
+
+* Fork the repo
+* Create feature branch
+* Commit changes
+* Open Pull Request
+
+---
+
+## 👨‍💻 Author
+
+**Abhishek Kumar**
+Full Stack Developer | Hackathon Participant
+
+---
+
+## ⭐ Acknowledgement
+
+* MongoDB Docs
+* React Docs
+* Node.js Community
+
+---
