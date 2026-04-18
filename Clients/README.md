@@ -139,7 +139,7 @@ HospitalVaccine/
 ### 1️⃣ Clone Repository
 
 ```id="2plk0u"
-git clone https://github.com/your-username/HospitalVaccine.git
+git clone https://github.com/AbhiSharmaNIT/HospitalVaccine.git
 cd HospitalVaccine
 ```
 
@@ -176,16 +176,6 @@ http://localhost:5173
 ```
 
 ---
-
-## 🔐 Environment Variables
-
-Create `.env` in server:
-
-```id="6j7hsv"
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-```
 
 ---
 
