@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+/* Container */
+.admin-container {
+  padding: 40px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Inputs */
+.card input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Buttons */
+.card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4f46e5, #22c55e);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Booking Cards */
+.booking-card {
+  background: #f9fafb;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+}

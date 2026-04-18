@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #ff7eb3, #6a11cb);
+}
+
+.auth-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.auth-card.expand {
+  width: 350px;
+  padding: 40px;
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.toggle button {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.toggle .active {
+  background: #6a11cb;
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.main-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background: purple;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.main-btn:hover {
+  background: #4b0082;
+}
+
+.switch-text {
+  margin-top: 12px;
+}
+
+.switch-text span {
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+}

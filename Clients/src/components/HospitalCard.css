@@ -1,0 +1,79 @@
+.hospital-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.hospital-card:hover {
+  transform: translateY(-5px);
+}
+
+.hospital-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hospital-header h2 {
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.city {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.hospital-body {
+  margin-top: 10px;
+}
+
+.hospital-body p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.vaccine-section {
+  margin-top: 10px;
+}
+
+.vaccine-section h4 {
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+.vaccine-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: #f4f6f7;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+.price {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.hospital-footer {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.hospital-footer button {
+  padding: 8px 15px;
+  background: #3498db;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hospital-footer button:hover {
+  background: #2980b9;
+}
